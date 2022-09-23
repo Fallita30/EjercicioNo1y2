@@ -1,10 +1,11 @@
-
+//Función que muestra la simetría de un string o número para convertir en el arreglo.
 function resultadoPrueba() {
     
     var array= document.getElementsByName("producto")[0].value;
     var arreglo = array.split('');
     document.querySelector("#Resultado").innerHTML = JSON.stringify(arreglo)
     
+    //Capicua es la forma adecuada de crear la simetría
     const capicua = (numero) => {
         numero = numero.toString()
         for(let i = 0; i<numero.length; i++){
