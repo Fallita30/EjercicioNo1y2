@@ -1,0 +1,24 @@
+
+function resultadoPrueba() {
+    
+    var array= document.getElementsByName("producto")[0].value;
+    var arreglo = array.split('');
+    document.querySelector("#Resultado").innerHTML = JSON.stringify(arreglo)
+    
+    const capicua = (numero) => {
+        numero = numero.toString()
+        for(let i = 0; i<numero.length; i++){
+            if(numero[i] !== numero[numero.length-1-i]){
+            return false
+            }
+        }
+        return true
+    }
+  
+    if(capicua(array)==true){
+        document.getElementById("result2").innerHTML = ("El arreglo es SIMETRICO y su longitud es "+array.length);
+    }else{
+        document.getElementById("result2").innerHTML = ("El arreglo NO es simétrico y su longitud es "+array.length);
+    }
+    
+}
